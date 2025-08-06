@@ -13,8 +13,9 @@ public class EmployeeExecutor {
 
         EmployeeUtils employeeUtils = new EmployeeUtils();
         System.out.println(employeeUtils.employeeWithHighestSalary(employeeList));
-        System.out.println(employeeUtils.employeeWithHighestSalary(employeeList));
-        System.out.println(employeeUtils.employeeWithHighestSalary(employeeList));
-        System.out.println(employeeUtils.employeeWithHighestSalary(employeeList));
+        System.out.println(employeeUtils.employeeWithLowestSalary(employeeList));
+        System.out.println(employeeUtils.sumOfEmployeeSalary(employeeList));
+        System.out.println(employeeUtils.employeeCountBasedOnDepartment(employeeList));
+        System.out.println(employeeUtils.employeeWIthAllVowelsInName(employeeList));
     }
 }
