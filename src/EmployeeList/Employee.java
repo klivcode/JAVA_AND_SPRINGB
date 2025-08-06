@@ -1,45 +1,36 @@
 package EmployeeList;
 
 public class Employee {
-        private String name;
-        private String address;
-        private String email;
-        private String mobileNumber;
-        private String department;
-        private double monthlySalary;
-        private short yearsOfExprinece;
+    private String fullName;
+    private String email;
+    private String address;
+    private String mobileNumber;
+    private String department;
+    private Float salary;
+    private Integer yearsOfExperience;
 
+    public Employee() {
 
-    // Default Constructor
-         public Employee()
-         {
+    }
 
-         }
-        //Parametrized Constructor
-    public Employee(String name, String address, String email, String mobileNumber, String department, double monthlySalary, short yearsOfExprinece) {
-        this.name = name;
-        this.address = address;
+    public Employee(String fullName,String address,String email, String mobileNumber, String department, Float salary,Integer yearsOfExperience) {
+        this.fullName = fullName;
         this.email = email;
+        this.address = address;
         this.mobileNumber = mobileNumber;
         this.department = department;
-        this.monthlySalary = monthlySalary;
-        this.yearsOfExprinece = yearsOfExprinece;
+        this.salary = salary;
+        this.yearsOfExperience = yearsOfExperience;
     }
 
-    public String getAddress() {
-        return address;
+
+
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public String getEmail() {
@@ -48,6 +39,14 @@ public class Employee {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getMobileNumber() {
@@ -66,19 +65,32 @@ public class Employee {
         this.department = department;
     }
 
-    public double getMonthlySalary() {
-        return monthlySalary;
+    public Float getSalary() {
+        return salary;
     }
 
-    public void setMonthlySalary(double monthlySalary) {
-        this.monthlySalary = monthlySalary;
+    public void setSalary(Float salary) {
+        this.salary = salary;
     }
 
-    public short getYearsOfExprinece() {
-        return yearsOfExprinece;
+    public Integer getYearsOfExperience() {
+        return yearsOfExperience;
     }
 
-    public void setYearsOfExprinece(short yearsOfExprinece) {
-        this.yearsOfExprinece = yearsOfExprinece;
+    public void setYearsOfExperience(Integer yearsOfExperience) {
+        this.yearsOfExperience = yearsOfExperience;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "fullName='" + fullName + '\'' +
+                ", email='" + email + '\'' +
+                ", address='" + address + '\'' +
+                ", mobileNumber='" + mobileNumber + '\'' +
+                ", department='" + department + '\'' +
+                ", salary=" + salary +
+                ", yearsOfExperience=" + yearsOfExperience +
+                '}';
     }
 }

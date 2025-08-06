@@ -1,0 +1,28 @@
+JDBC
+java Database Connectivity
+
+
+Steps
+    1. Load Driver
+        mysql or postgres
+        com.mysql.cj.jdbc.Driver
+        org.postgresql.Driver
+
+    2. Connection Create
+        Connection connection=DriverManager.getConnection(url,username,password);
+        url
+        jdbc:postgresql://<hostname>:<port>/<database_name>
+
+    3. Query Create
+        Statement
+        PreparedStatement ? ?
+        PreparedStatement insertStatement= connection.prepareStatement(QUERY);
+        InsertStatement.setParameter();
+
+    4. Execute and catch Result
+           C ---- insert    returns integer
+           R---select       Table---> Returns ResultSet
+           U  --- Update    returns integer
+           D------delete
+
+    5. Use the data
