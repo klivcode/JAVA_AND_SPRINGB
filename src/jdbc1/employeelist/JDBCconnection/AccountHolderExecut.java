@@ -9,7 +9,7 @@ public class AccountHolderExecut extends AccountHolderIO {
     AccountHolderOperations accountHolderOperations = new AccountHolderOperations();
 
     public AccountHolderExecut() {
-        String Path = "src/com/JDBC/account_details.txt";
+        String filePath = "src/com/JDBC/account_details.txt";
         boolean status = true;
         while (status) {
             DisplayManager.showmenu();
@@ -26,18 +26,10 @@ public class AccountHolderExecut extends AccountHolderIO {
                     DisplayManager.displayAccounHolderList(employeeList);
 
                     break;
-//                case 3:
-//
-//                    EmployeeDataSource employeeDataSource = new EmployeeDataSource();
-//                    List<Employee> fileemployeeList = employeeDataSource.readEmployeeDataFromTextFile(Path);
-//                    for(Employee employee:fileemployeeList){
-//                        accountHolderOperations.InsertAccountHolder(employee);
-//                    }
-//                    break;
                 case 3:
 
                     EmployeeDataSource batchDataSource = new EmployeeDataSource();
-                    List<EmpLOYEE> batchEmployees = batchDataSource.readEmployeeDataFromTextFile(Path);
+                    List<EmpLOYEE> batchEmployees = batchDataSource.readEmployeeDataFromTextFile(filePath);
                     accountHolderOperations.InsertAccountHolderBatch(batchEmployees);
                     break;
                 case 4:

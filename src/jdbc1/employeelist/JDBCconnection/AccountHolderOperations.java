@@ -13,7 +13,7 @@ public class AccountHolderOperations {
 
     public void InsertAccountHolder(EmpLOYEE employee) {
         try {
-            String insert_sql = "INSERT INTO accountHolder (accountHolderName,accountNumber,balance,overdraftLimit,kycVerified,perDayWithdrawlLimit)VALUES (?, ?, ?, ?, ?, ?);";
+            String insert_sql = "INSERT INTO accountHolder (accountHolderName,accountNumber,balance,overdraftLimit,kycVerified,perdDayWithdrawlLimit)VALUES (?, ?, ?, ?, ?, ?);";
             PreparedStatement insertStatement = conn.connection.prepareStatement(insert_sql);
 
             insertStatement.setString(1, employee.getAccountHolderName());

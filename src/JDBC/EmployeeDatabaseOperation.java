@@ -12,8 +12,7 @@ public class EmployeeDatabaseOperation {
     public void insertEmployee(Employee e){
         try{
             String INSERT_SQL
-                    = "Insert into employee(full_name, email, address, mobile_number, department, salary, year_of_experinece)\n "+
-                    "values(?,?,?,?,?,?,?)";
+                    = "INSERT INTO employee(full_name, email, address, mobile_number, department, salary, year_of_experience) VALUES (?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement insertStatement=
                     databaseConnection.connection.prepareStatement(INSERT_SQL);
             insertStatement.setString(1, e.getFullName());
@@ -53,7 +52,7 @@ public class EmployeeDatabaseOperation {
                 employee.setMobileNumber(resultSet.getString("mobile_number"));
                 employee.setDepartment(resultSet.getString("department"));
                 employee.setSalary(resultSet.getFloat("salary"));
-                employee.setYearsOfExperience(resultSet.getInt("year_of_experinece"));
+                employee.setYearsOfExperience(resultSet.getInt("year_of_experience"));
                 employees.add(employee);
             }
             return employees;
