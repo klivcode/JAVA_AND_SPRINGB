@@ -10,7 +10,8 @@ public class TrimArraylists {
         colors1.add("Green");
         colors1.add("Orange");
         colors1.add("Violet");
-
+        colors1.add("Pink");
+        colors1.add("Yellow");
 
         System.out.println("Before triming"+colors1);
         colors1.trimToSize();
