@@ -12,6 +12,12 @@ public class LowerElementTreeSet {
         colors1.add(7);
         colors1.add(9);
         colors1.add(10);
+        colors1.add(11);
+        colors1.add(12);
+        colors1.add(13);
+        colors1.add(14);
+        colors1.add(15);
+        colors1.add(16);
 
         System.out.println("Enter the number");
         Scanner sc = new Scanner(System.in);
